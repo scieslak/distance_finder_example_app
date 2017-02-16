@@ -1,0 +1,12 @@
+dist: trusty
+sudo: required
+language: ruby
+rvm:
+- 2.3.3
+script:
+- bundle exec rails test
+after_script:
+- bundle exec codeclimate-test-reporter
+env:
+  global:
+  - COVERAGE=true
