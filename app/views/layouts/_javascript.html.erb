@@ -18,4 +18,5 @@
 
 <% autocomplete = "https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete" %>
 
-<%= javascript_include_tag 'application', autocomplete, 'data-turbolinks-track': 'reload', :cache => 'all'%>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'%>
+<%= javascript_include_tag autocomplete,  async: Rails.env.production? %>
