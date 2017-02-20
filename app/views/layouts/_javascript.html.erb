@@ -1,4 +1,4 @@
-<noscript>
+<noscript id="deferred-styles">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </noscript>
 
@@ -16,4 +16,6 @@
   else window.addEventListener('load', loadDeferredStyles);
 </script>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<% autocomplete = "https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete" %>
+
+<%= javascript_include_tag 'application', autocomplete, 'data-turbolinks-track': 'reload'%>

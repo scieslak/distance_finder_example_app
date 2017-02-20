@@ -1,5 +1,6 @@
-<%= form_for '#' do |f| %>
-  <%= f.text_field :origin %>
-  <%= f.text_field :destination %>
-  <%= f.submit "Calculate" %>
+
+<%= form_tag({controller: "public_pages", action: "calculate"}, method: "post") do %>
+  <%= text_field_tag 'origin', nil, id: "origin" %>
+  <%= text_field_tag :destination, nil, id: "destination" %>
+  <%= submit_tag "Calculate" %>
 <% end %>
