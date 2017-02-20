@@ -1,3 +1,4 @@
-<p>distance: <%= @distance %> </p>
-<p>time: <%= @time %> </p>
-<p>origin: <%= @origin %> </p>
+<p>distance: <%= @calculator.distance.round(1).to_s %> miles</p>
+<p>time: <%= @calculator.duration %> </p>
+<p>origin: <%= @calculator.start_address %> </p>
+<p>origin: <%= @calculator.end_address %> </p>

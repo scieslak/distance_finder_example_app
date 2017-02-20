@@ -79,6 +79,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
     debug_inspector (0.0.2)
+    distance_finder (1.0.3)
+      activesupport
     docile (1.1.5)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -134,7 +136,7 @@ GEM
     nenv (0.3.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (4.0.1)
+    net-ssh (4.1.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -145,7 +147,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (3.7.0)
+    puma (3.7.1)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -246,6 +248,7 @@ DEPENDENCIES
   capistrano3-puma
   codeclimate-test-reporter (= 1.0.4)
   coffee-rails (= 4.2.1)
+  distance_finder
   guard (= 2.14.1)
   guard-minitest (= 2.4.6)
   jbuilder (= 2.6.1)

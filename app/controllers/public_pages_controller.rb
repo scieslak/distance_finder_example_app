@@ -3,8 +3,7 @@ class PublicPagesController < ApplicationController
   end
 
   def calculate
-    @origin = params[:origin]
-    @distance = "100 km"
-    @time = "30 min"
+    # require 'distance_finder'
+    @calculator = DistanceFinder::Calculator.new(params[:origin], params[:destination])
   end
 end
