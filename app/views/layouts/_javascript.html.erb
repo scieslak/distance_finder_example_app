@@ -16,7 +16,6 @@
   else window.addEventListener('load', loadDeferredStyles);
 </script>
 
-<% autocomplete = "https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete" %>
-
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'%>
-<%= javascript_include_tag autocomplete,  async: Rails.env.production? %>
+
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete" async defer></script>
