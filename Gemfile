@@ -11,7 +11,7 @@ gem 'jquery-ui-rails',              '6.0.1'
 gem 'turbolinks',                   '5.0.1'
 gem 'jbuilder',                     '2.6.1'
 gem 'bcrypt',                       '3.1.11'
-gem 'distance_finder'
+gem 'distance_finder',              '1.0.4'
 
 group :development, :test do
   gem 'byebug', platform: :mri

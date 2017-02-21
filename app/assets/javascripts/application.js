@@ -14,10 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-var autocomplete;
-
-var initAutocomplete = function() {
-  new google.maps.places.Autocomplete(document.getElementById('origin'));
-  new google.maps.places.Autocomplete(document.getElementById('destination'));
-}

@@ -1,4 +1,8 @@
-<p>distance: <%= @calculator.distance.round(1).to_s %> miles</p>
-<p>time: <%= @calculator.duration %> </p>
-<p>origin: <%= @calculator.start_address %> </p>
-<p>origin: <%= @calculator.end_address %> </p>
+<% if @calculator.status == "OK" %>
+  <p>origin: <%= @calculator.start_address %> </p>
+  <p>destination: <%= @calculator.end_address %> </p>
+  <p>distance: <%= @calculator.distance%></p>
+  <p>time: <%= @calculator.duration %> </p>
+<% else %>
+  <p>status: <%= @calculator.status %> </p>
+<% end %>

@@ -79,7 +79,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
     debug_inspector (0.0.2)
-    distance_finder (1.0.3)
+    distance_finder (1.0.4)
       activesupport
     docile (1.1.5)
     erubis (2.7.0)
@@ -248,7 +248,7 @@ DEPENDENCIES
   capistrano3-puma
   codeclimate-test-reporter (= 1.0.4)
   coffee-rails (= 4.2.1)
-  distance_finder
+  distance_finder (= 1.0.4)
   guard (= 2.14.1)
   guard-minitest (= 2.4.6)
   jbuilder (= 2.6.1)

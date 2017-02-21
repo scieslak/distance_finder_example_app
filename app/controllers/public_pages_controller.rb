@@ -3,7 +3,13 @@ class PublicPagesController < ApplicationController
   end
 
   def calculate
-    # require 'distance_finder'
-    @calculator = DistanceFinder::Calculator.new(params[:origin], params[:destination])
+    origin = params[:origin]
+    destination = params[:destination]
+    
+    if !origin.blank? && !destination.blank?
+      @calculator = DistanceFinder::Calculator.new(origin, destination)
+    else
+      render :home
+    end
   end
 end
