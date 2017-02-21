@@ -12,4 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+/*div {
+  border: 1px solid red;
+}*/
+ /*#origin {
+   padding-left: 5em;
+ }*/
