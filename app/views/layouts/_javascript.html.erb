@@ -1,8 +1,8 @@
-<!-- <noscript id="deferred-styles"> -->
+<noscript id="deferred-styles">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<!-- </noscript> -->
+</noscript>
 
-<!-- <script>
+<script>
   var loadDeferredStyles = function() {
     var addStylesNode = document.getElementById("deferred-styles");
     var replacement = document.createElement("div");
@@ -14,7 +14,7 @@
       webkitRequestAnimationFrame || msRequestAnimationFrame;
   if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
   else window.addEventListener('load', loadDeferredStyles);
-</script> -->
+</script>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'%>
 
