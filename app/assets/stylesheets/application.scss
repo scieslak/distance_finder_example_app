@@ -14,10 +14,19 @@
  *= require_self
  *= require foundation_and_overrides
 
- */
+*/
+
+
 /*div {
   border: 1px solid red;
 }*/
  /*#origin {
    padding-left: 5em;
  }*/
+
+ #form-conatiner {
+   margin-top: 10%;
+   input {
+     text-align: center;
+   }
+ }

@@ -1,11 +1,16 @@
 <div class="row">
   <div class="small-offset-1 large-offset-3 large-6 small-10 columns">
     <div class="row">
-      <div class="small-12">
+      <div class="small-12" id="form-conatiner">
         <%= form_tag({controller: "public_pages", action: "calculate"}, method: "post") do %>
-          <%= text_field_tag 'origin', nil, id: "origin", placeholder: "origin" %>
-          <%= text_field_tag :destination, nil, id: "destination", placeholder: "destination" %>
-          <%= submit_tag "Calculate", class: "button large expanded" %>
+
+          <label>Origin
+            <%= text_field_tag 'origin', nil, id: "origin", placeholder: "" %>
+          </label>
+          <label>Destination
+            <%= text_field_tag :destination, nil, id: "destination", placeholder: "" %>
+          </label>
+          <%= submit_tag "Calculate", class: "button expanded" %>
         <% end %>
       </div>
     </div>
@@ -14,6 +19,3 @@
   <div class="small-1 medium-3 columns"></div>
 
 </div>
-
-
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB2wET-9T3s0yNYcgH8_dXZ2q4IZMJRcA&libraries=places&callback=initAutocomplete" async defer></script> -->
