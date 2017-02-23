@@ -13,6 +13,7 @@ gem 'jbuilder',                     '2.6.1'
 gem 'bcrypt',                       '3.1.11'
 gem 'distance_finder',              '1.0.4'
 gem 'foundation-rails',             '6.3.0.0'
+gem "autoprefixer-rails"
 
 group :development, :test do
   gem 'byebug', platform: :mri
