@@ -4,25 +4,27 @@
 
       <div class="row">
         <div class="medium-5 columns">
-          <p><%= @calculator.start_address %></p>
+          <h2><%= @calculator.start_address %></h2>
         </div>
         <div class=" medium-2 columns">
           &#8646;
         </div>
         <div class="medium-5 columns">
-          <p><%= @calculator.end_address %></p>
+          <h2><%= @calculator.end_address %></h2>
         </div>
       </div>
 
       <div class="row">
         <div class="medium-6 columns">
           <div class="card">
-            <p>Distance:<br><%= @calculator.distance %></p>
+            <h3>Distance:</h3>
+            <p><%= @calculator.distance %></p>
           </div>
         </div>
         <div class="medium-6 columns">
           <div class="card">
-            <p>Duration:<br><%= @calculator.duration %></p>
+            <h3>Duration:</h3>
+              <p><%= @calculator.duration %></p>
           </div>
         </div>
       </div>
