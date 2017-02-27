@@ -3,8 +3,12 @@
 
     <div class="row">
       <div class="medium-8 columns">
-        <h1>DistanceFinder</h1>
 
+          <div id="little-logo" class="show-for-small-only">
+            <%= render "layouts/df_ruller_logo_sm" %>
+          </div>
+
+          <h1>DistanceFinder</h1>
         <svg xmlns="http://www.w3.org/2000/svg" width="300" height="3" baseProfile="full">
           <line x1="0" x2="300" y1="0" y2="0" stroke="#ff0" stroke-width="4"/>
         </svg>
@@ -15,7 +19,7 @@
       </div>
       <div class="medium-4 columns">
 
-          <div id="large-logo"><%= render 'layouts/df_ruller_logo' %></div>
+          <div id="large-logo" class="show-for-medium"><%= render 'layouts/df_ruller_logo' %></div>
       </div>
     </div>
 
