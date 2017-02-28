@@ -1,5 +1,6 @@
 $(document).on "turbolinks:load", ->
 
+  $('#preloader').slideUp(2000)
   # Initialize Google Autocomplete.
   initAutocomplete = (element) ->
     $element = $('#' + element)
