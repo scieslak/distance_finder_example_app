@@ -28,6 +28,16 @@ body, html {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, .8) ;
 }
 
+.main-bg {
+position: fixed;
+
+right: 0;
+z-index: -1000;
+height: 100%;
+overflow: hidden;
+
+}
+
 
 
 #home {
@@ -36,15 +46,15 @@ body, html {
 }
 
 #little-logo {
-  width: 100px;
-  height: 70px;
-  margin: 0 auto;
+  width: 150px;
+  height: 100px;
+  // margin: 0 auto;
   overflow: visible;
 }
 
 #large-logo {
-  width: 200px;
-  height: 150px;
+  width: 300px;
+  height: 250px;
   margin: 0 auto;
   overflow: visible;
 }
