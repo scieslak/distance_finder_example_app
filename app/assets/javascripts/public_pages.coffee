@@ -22,7 +22,7 @@ $(document).on "turbolinks:load", ->
       .addClass('fill-screen')
 
     $('#overlay')
-      .delay(2000)
+      .delay(1000)
       .fadeOut()
 
 
