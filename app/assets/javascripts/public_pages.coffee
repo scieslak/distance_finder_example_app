@@ -1,6 +1,5 @@
 $(document).on "turbolinks:load", ->
 
-  $('#preloader').slideUp(2000)
   # Initialize Google Autocomplete.
   initAutocomplete = (element) ->
     $element = $('#' + element)
@@ -16,3 +15,18 @@ $(document).on "turbolinks:load", ->
 
   initAutocomplete 'origin'
   initAutocomplete 'destination'
+
+  fill_screen = ->
+    $('#preloader')
+      .fadeIn()
+      .addClass('fill-screen')
+
+    $('#overlay')
+      .delay(2000)
+      .fadeOut()
+
+
+
+  $('#preloader div')
+    .delay(500)
+    .fadeOut(500, fill_screen)
