@@ -27,20 +27,20 @@ $(document).on "turbolinks:load", ->
 
   showHome = ->
     $('#home-bg')
-      .velocity("transition.slideUpIn")
+      .velocity("transition.slideUpIn", 400)
     $('#little-logo')
       .delay(100)
-      .velocity("transition.slideDownIn")
+      .velocity("transition.slideDownIn", 400)
     $('#large-logo')
       .delay(100)
-      .velocity("transition.slideDownIn")
+      .velocity("transition.slideDownIn", 400)
     $('#home-info')
       .delay(200)
       .find('h1,svg,p')
-      .velocity("transition.slideLeftIn", { stagger: 100, duration: 300 })
+      .velocity("transition.slideLeftIn", { duration: 400, stagger: 100})
     $('#home-buttons div')
-      .delay(500)
-      .velocity("transition.slideUpIn", { duration: 200, stagger: 100 })
+      .delay(300)
+      .velocity("transition.slideUpIn", { duration: 400, stagger: 100 })
 
 
   fillScreen = ->
