@@ -1,5 +1,14 @@
 $(document).on "turbolinks:load", ->
 
+  # Hide all elements
+  $('#home-bg').hide()
+  $('#little-logo').hide()
+  $('#home-info')
+    .find('h1,svg,p')
+    .hide()
+  $('#large-logo').hide()
+  $('#home-buttons div').hide()
+
   # Initialize Google Autocomplete.
   initAutocomplete = (element) ->
     $element = $('#' + element)
@@ -16,17 +25,36 @@ $(document).on "turbolinks:load", ->
   initAutocomplete 'origin'
   initAutocomplete 'destination'
 
-  fill_screen = ->
+  showHome = ->
+    $('#home-bg')
+      .velocity("transition.slideUpIn")
+    $('#little-logo')
+      .delay(100)
+      .velocity("transition.slideDownIn")
+    $('#large-logo')
+      .delay(100)
+      .velocity("transition.slideDownIn")
+    $('#home-info')
+      .delay(200)
+      .find('h1,svg,p')
+      .velocity("transition.slideLeftIn", { stagger: 100, duration: 300 })
+    $('#home-buttons div')
+      .delay(500)
+      .velocity("transition.slideUpIn", { duration: 200, stagger: 100 })
+
+
+  fillScreen = ->
     $('#preloader')
       .fadeIn()
       .addClass('fill-screen')
-
     $('#overlay')
       .delay(1000)
-      .fadeOut()
-
-
+      .velocity({opacity: 0}, {complete: showHome })
 
   $('#preloader div')
     .delay(500)
-    .fadeOut(500, fill_screen)
+    .velocity({opacity: 0}, {complete: fillScreen })
+
+  # $('#home-bg')
+  #   .delay(3000)
+  #   .velocity("transition.slideUpIn");

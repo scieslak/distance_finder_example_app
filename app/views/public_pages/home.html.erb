@@ -4,28 +4,31 @@
   <div class="small-offset-1 small-10 columns">
 
     <div class="row">
-      <div class="medium-8 columns">
+      <div id="home-info" class="medium-8 columns">
 
-          <div id="little-logo" class="show-for-small-only">
-            <%= render "layouts/df_ruller_logo_sm" %>
-          </div>
+        <div id="little-logo" class="show-for-small-only">
+          <%= render "layouts/df_ruller_logo_sm" %>
+        </div>
 
-          <h1>DistanceFinder</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="3" baseProfile="full">
-          <line x1="0" x2="300" y1="0" y2="0" stroke="#ff0" stroke-width="4"/>
+        <h1>DistanceFinder</h1>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="3" baseProfile="full">
+          <line x1="0" x2="200" y1="0" y2="0" stroke="#ff0" stroke-width="4"/>
         </svg>
 
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div class="medium-4 columns">
 
-          <div id="large-logo" class="show-for-medium"><%= render 'layouts/df_ruller_logo' %></div>
+      <div class="medium-4 columns">
+        <div id="large-logo" class="show-for-medium">
+          <%= render 'layouts/df_ruller_logo' %>
+        </div>
       </div>
     </div>
 
-    <div class="row">
+    <div id="home-buttons" class="row">
       <div class="medium-6 columns">
         <a href="#" class="button expanded large">Get started!</a>
       </div>
