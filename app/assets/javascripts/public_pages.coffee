@@ -7,7 +7,8 @@ $(document).on "turbolinks:load", ->
     .find('h1,svg,p')
     .hide()
   $('#large-logo').hide()
-  $('#home-buttons div').hide()
+  $('#get-started').hide()
+  $('#home').hide()
 
   # Initialize Google Autocomplete.
   initAutocomplete = (element) ->
@@ -25,25 +26,7 @@ $(document).on "turbolinks:load", ->
   initAutocomplete 'origin'
   initAutocomplete 'destination'
 
-  showHome = ->
-    $('#overlay').hide()
-    $('#home-bg')
-      .velocity("transition.slideUpIn", 400)
-    $('#little-logo')
-      .delay(100)
-      .velocity("transition.slideDownIn", 400)
-    $('#large-logo')
-      .delay(100)
-      .velocity("transition.slideDownIn", 400)
-    $('#home-info')
-      .delay(200)
-      .find('h1,svg,p')
-      .velocity("transition.slideLeftIn", { duration: 400, stagger: 100})
-    $('#home-buttons div')
-      .delay(300)
-      .velocity("transition.slideUpIn", { duration: 400, stagger: 100 })
-
-
+  # Fill screen green, fade out overlay and call showHome
   fillScreen = ->
     $('#preloader')
       .fadeIn()
@@ -52,10 +35,56 @@ $(document).on "turbolinks:load", ->
       .delay(1000)
       .velocity({opacity: 0}, {complete: showHome })
 
+  # Show homepage elements
+  showHome = ->
+    $('#overlay').hide()
+    $('#home').show()
+    $('#home-info')
+      .find('h1,svg,p')
+      .velocity("transition.slideLeftIn", { duration: 400, stagger: 200})
+    $('#little-logo')
+      .delay(600)
+      .velocity("transition.slideDownIn", 400)
+    $('#large-logo')
+      .delay(600)
+      .velocity("transition.slideDownIn", 400)
+    $('#get-started')
+      .delay(800)
+      .velocity("transition.slideUpIn", 400)
+    $('#home-bg')
+      .delay(900)
+      .velocity("transition.slideUpIn", 400)
+
+  # Hide homepage elements
+  hideHome = ->
+    $('#home-bg')
+      .velocity("transition.slideDownOut", 400)
+    $('#get-started')
+      .delay(200)
+      .velocity("transition.slideDownOut", 400)
+    $('#little-logo')
+      .delay(400)
+      .velocity("transition.slideUpOut", 400)
+    $('#large-logo')
+      .delay(400)
+      .velocity("transition.slideUpOut", 400)
+    $('#home-info p')
+      .delay(600)
+      .velocity("transition.slideRightOut", 400)
+    $('#home-info svg')
+      .delay(800)
+      .velocity("transition.slideRightOut", 400)
+    $('#home-info h1')
+      .delay(1000)
+      .velocity("transition.slideRightOut", 400)
+    # $('#home')
+    #   .delay(3000)
+    #   .hide()
+
+# Remove preloader dots and call fillScreen
   $('#preloader div')
     .delay(500)
     .velocity({opacity: 0}, {complete: fillScreen })
 
-  # $('#home-bg')
-  #   .delay(3000)
-  #   .velocity("transition.slideUpIn");
+  $('#get-started').click(hideHome)
+  $('#show-home').click(showHome)

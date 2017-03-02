@@ -1,5 +1,6 @@
 <%= render 'preloader' %>
-<%= render 'home_bg' %>
+
+<button id="show-home" class="button">Home</button>
 <div class="row" id="home">
   <div class="small-offset-1 small-10 columns">
 
@@ -29,20 +30,18 @@
 
     </div>
 
-    <div id="home-buttons" class="row">
+    <div class="row">
       <div class="medium-6 columns">
-        <a href="#" class="button expanded large">Get started!</a>
+        <button id="get-started" class="button expanded large">Get started!</button>
       </div>
       <div class="medium-6 columns">
-        <a href="#" class="button expanded large">About project</a>
-      </div>
     </div>
 
   </div>
   <div class="small-1 columns"></div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="small-offset-1 large-offset-3 large-6 small-10 columns">
     <div class="row">
       <div class="small-12" id="form-conatiner">
@@ -62,4 +61,6 @@
   </div>
   <div class="small-1 medium-3 columns"></div>
 
+ -->
 </div>
+<%= render 'home_bg' %>
