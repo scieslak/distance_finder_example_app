@@ -26,6 +26,7 @@ $(document).on "turbolinks:load", ->
   initAutocomplete 'destination'
 
   showHome = ->
+    $('#overlay').hide()
     $('#home-bg')
       .velocity("transition.slideUpIn", 400)
     $('#little-logo')
